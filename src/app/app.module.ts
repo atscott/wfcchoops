@@ -1,28 +1,27 @@
-import { NgModule, ApplicationRef } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { RouterModule } from '@angular/router';
-import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
+import {ApplicationRef, NgModule} from '@angular/core';
+import {FormsModule} from '@angular/forms';
+import {HttpModule} from '@angular/http';
+import {BrowserModule} from '@angular/platform-browser';
+import {RouterModule} from '@angular/router';
+import {createNewHosts, removeNgStyles} from '@angularclass/hmr';
 
+import {About} from './about';
+// App is our top level component
+import {App} from './app.component';
+import {APP_RESOLVER_PROVIDERS} from './app.resolver';
+import {ROUTES} from './app.routes';
+import {AppState} from './app.service';
 /*
  * Platform and Environment providers/directives/pipes
  */
-import { ENV_PROVIDERS } from './environment';
-import { ROUTES } from './app.routes';
-// App is our top level component
-import { App } from './app.component';
-import { APP_RESOLVER_PROVIDERS } from './app.resolver';
-import { AppState } from './app.service';
-import { Home } from './home';
-import { About } from './about';
-import { NoContent } from './no-content';
+import {ENV_PROVIDERS} from './environment';
+import {Home} from './home';
+import {MdModule} from './md.module';
+import {NoContent} from './no-content';
+
 
 // Application wide providers
-const APP_PROVIDERS = [
-  ...APP_RESOLVER_PROVIDERS,
-  AppState
-];
+const APP_PROVIDERS = [...APP_RESOLVER_PROVIDERS, AppState];
 
 /**
  * `AppModule` is the main entry point into Angular2's bootstraping process
@@ -39,6 +38,7 @@ const APP_PROVIDERS = [
     BrowserModule,
     FormsModule,
     HttpModule,
+    MdModule.forRoot(),
     RouterModule.forRoot(ROUTES, { useHash: true })
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
@@ -56,7 +56,8 @@ export class AppModule {
     delete store.state;
   }
   hmrOnDestroy(store) {
-    var cmpLocation = this.appRef.components.map(cmp => cmp.location.nativeElement);
+    var cmpLocation =
+        this.appRef.components.map(cmp => cmp.location.nativeElement);
     // recreate elements
     var state = this.appState._state;
     store.state = state;
@@ -66,7 +67,7 @@ export class AppModule {
   }
   hmrAfterDestroy(store) {
     // display new elements
-    store.disposeOldHosts()
+    store.disposeOldHosts();
     delete store.disposeOldHosts;
   }
 }

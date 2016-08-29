@@ -1,21 +1,15 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 
 @Injectable()
 export class AppState {
-  _state = { };
+  _state = {};
 
-  constructor() {
-
-  }
+  constructor() {}
 
   // already return a clone of the current state
-  get state() {
-    return this._state = this._clone(this._state);
-  }
+  get state() { return this._state = this._clone(this._state); }
   // never allow mutation
-  set state(value) {
-    throw new Error('do not mutate the `.state` directly');
-  }
+  set state(value) { throw new Error('do not mutate the `.state` directly'); }
 
 
   get(prop?: any) {
@@ -32,6 +26,6 @@ export class AppState {
 
   _clone(object) {
     // simple object clone
-    return JSON.parse(JSON.stringify( object ));
+    return JSON.parse(JSON.stringify(object));
   }
 }
