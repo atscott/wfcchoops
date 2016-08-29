@@ -3,8 +3,9 @@
  */
 
 const helpers = require('./helpers');
-const webpackMerge = require('webpack-merge'); // used to merge webpack configs
-const commonConfig = require('./webpack.common.js'); // the settings that are common to prod and dev
+const webpackMerge = require('webpack-merge');  // used to merge webpack configs
+const commonConfig = require(
+    './webpack.common.js');  // the settings that are common to prod and dev
 
 /**
  * Webpack Plugins
@@ -18,12 +19,8 @@ const ENV = process.env.ENV = process.env.NODE_ENV = 'development';
 const HOST = process.env.HOST || 'localhost';
 const PORT = process.env.PORT || 3000;
 const HMR = helpers.hasProcessFlag('hot');
-const METADATA = webpackMerge(commonConfig.metadata, {
-  host: HOST,
-  port: PORT,
-  ENV: ENV,
-  HMR: HMR
-});
+const METADATA = webpackMerge(
+    commonConfig.metadata, {host: HOST, port: PORT, ENV: ENV, HMR: HMR});
 
 /**
  * Webpack configuration
@@ -80,14 +77,16 @@ module.exports = webpackMerge(commonConfig, {
      * The filename of the SourceMaps for the JavaScript files.
      * They are inside the output.path directory.
      *
-     * See: http://webpack.github.io/docs/configuration.html#output-sourcemapfilename
+     * See:
+     * http://webpack.github.io/docs/configuration.html#output-sourcemapfilename
      */
     sourceMapFilename: '[name].map',
 
     /** The filename of non-entry chunks as relative path
      * inside the output.path directory.
      *
-     * See: http://webpack.github.io/docs/configuration.html#output-chunkfilename
+     * See:
+     * http://webpack.github.io/docs/configuration.html#output-chunkfilename
      */
     chunkFilename: '[id].chunk.js',
 
@@ -100,13 +99,15 @@ module.exports = webpackMerge(commonConfig, {
     /**
      * Plugin: DefinePlugin
      * Description: Define free variables.
-     * Useful for having development builds with debug logging or adding global constants.
+     * Useful for having development builds with debug logging or adding global
+     * constants.
      *
      * Environment helpers
      *
      * See: https://webpack.github.io/docs/list-of-plugins.html#defineplugin
      */
-    // NOTE: when adding more properties, make sure you include them in custom-typings.d.ts
+    // NOTE: when adding more properties, make sure you include them in
+    // custom-typings.d.ts
     new DefinePlugin({
       'ENV': JSON.stringify(METADATA.ENV),
       'HMR': METADATA.HMR,
@@ -117,18 +118,6 @@ module.exports = webpackMerge(commonConfig, {
       }
     }),
   ],
-
-  /**
-   * Static analysis linter for TypeScript advanced options configuration
-   * Description: An extensible linter for the TypeScript language.
-   *
-   * See: https://github.com/wbuchwalter/tslint-loader
-   */
-  tslint: {
-    emitErrors: false,
-    failOnHint: false,
-    resourcePath: 'src'
-  },
 
   /**
    * Webpack Development Server configuration
@@ -142,10 +131,7 @@ module.exports = webpackMerge(commonConfig, {
     port: METADATA.port,
     host: METADATA.host,
     historyApiFallback: true,
-    watchOptions: {
-      aggregateTimeout: 300,
-      poll: 1000
-    },
+    watchOptions: {aggregateTimeout: 300, poll: 1000},
     outputPath: helpers.root('dist')
   },
 
