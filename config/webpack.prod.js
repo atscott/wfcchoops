@@ -31,6 +31,8 @@ const METADATA = webpackMerge(
 
 module.exports = webpackMerge(commonConfig, {
 
+  metadata: METADATA,
+
   /**
    * Switch loaders to debug mode.
    *
