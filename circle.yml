@@ -11,6 +11,6 @@ general:
     - "dist.zip"
 deployment:
   production:
-    branch: production
+    branch: master
     commands:
       - ./deploy_prod.sh
