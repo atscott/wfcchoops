@@ -1,4 +1,4 @@
-checkout:
+dependencies:
   post:
     - npm run build:prod
     - zip -r dist.zip dist
