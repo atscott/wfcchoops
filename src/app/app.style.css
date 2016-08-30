@@ -1,3 +1,32 @@
 body {
   margin: 0;
 }
+
+html, body {
+  height: 100%;
+  background: #F4FAFA;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button.active {
+  background: #fff;
+  color: #009688;
+}
+
+button.active:hover {
+  color: #fff;
+}
+
+.layout-fill {
+  flex: 1 1 auto;
+}
+
+.home {
+  flex: 1;
+}
+
+md-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}

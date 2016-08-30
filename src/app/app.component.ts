@@ -6,7 +6,7 @@ import {Component, ViewEncapsulation} from '@angular/core';
   styleUrls: ['./app.style.css'],
   template: `
   <md-sidenav-layout>
-    <md-sidenav #start mode="over">
+    <md-sidenav mode="over">
       <md-list>
         <md-list-item>
           <a [routerLink]=" ['./'] ">
@@ -31,7 +31,7 @@ import {Component, ViewEncapsulation} from '@angular/core';
       </md-list>
     </md-sidenav>
     <md-content>
-      <md-toolbar color="pimary">
+      <md-toolbar color="primary">
         <div>
           <md-toolbar-row>
             <button md-icon-button (click)="start.open()">
