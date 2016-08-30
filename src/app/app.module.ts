@@ -5,17 +5,21 @@ import {BrowserModule} from '@angular/platform-browser';
 import {RouterModule} from '@angular/router';
 
 import {About} from './about';
-// App is our top level component
 import {App} from './app.component';
 import {APP_RESOLVER_PROVIDERS} from './app.resolver';
 import {ROUTES} from './app.routes';
-/*
- * Platform and Environment providers/directives/pipes
- */
+import {Contact} from './contact/contact.component';
 import {ENV_PROVIDERS} from './environment';
 import {Home} from './home';
+import {K4} from './k4/k4.component';
+import {Links} from './links/links.component';
 import {MdModule} from './md.module';
 import {NoContent} from './no-content';
+import {OpenGym} from './opengym/opengym.component';
+import {Teams} from './teams/teams.component';
+import {Tournaments} from './tournaments/tournaments.component';
+import {Whs} from './whs/whs.component';
+
 
 
 // Application wide providers
@@ -30,7 +34,14 @@ const APP_PROVIDERS = [...APP_RESOLVER_PROVIDERS];
     App,
     About,
     Home,
-    NoContent
+    NoContent,
+    Teams,
+    Whs,
+    Links,
+    OpenGym,
+    Tournaments,
+    Contact,
+    K4
   ],
   imports: [ // import Angular's modules
     BrowserModule,

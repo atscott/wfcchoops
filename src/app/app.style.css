@@ -1,32 +1,16 @@
-body {
-  margin: 0;
-}
-
-html, body {
-  height: 100%;
-  background: #F4FAFA;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-button.active {
-  background: #fff;
-  color: #009688;
-}
-
-button.active:hover {
-  color: #fff;
-}
-
 .layout-fill {
-  flex: 1 1 auto;
-}
-
-.home {
-  flex: 1;
-}
-
-md-content {
-  display: flex;
-  flex-direction: column;
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
   height: 100%;
+}
+
+.middle-column {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+md-nav-list a.active .md-list-item {
+  background: blue;
 }
