@@ -3,15 +3,17 @@
  */
 
 const helpers = require('./helpers');
-const webpackMerge = require('webpack-merge'); // used to merge webpack configs
-const commonConfig = require('./webpack.common.js'); // the settings that are common to prod and dev
+const webpackMerge = require('webpack-merge');  // used to merge webpack configs
+const commonConfig = require(
+    './webpack.common.js');  // the settings that are common to prod and dev
 
 /**
  * Webpack Plugins
  */
 const ProvidePlugin = require('webpack/lib/ProvidePlugin');
 const DefinePlugin = require('webpack/lib/DefinePlugin');
-const NormalModuleReplacementPlugin = require('webpack/lib/NormalModuleReplacementPlugin');
+const NormalModuleReplacementPlugin =
+    require('webpack/lib/NormalModuleReplacementPlugin');
 const IgnorePlugin = require('webpack/lib/IgnorePlugin');
 const DedupePlugin = require('webpack/lib/optimize/DedupePlugin');
 const UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
@@ -23,12 +25,9 @@ const WebpackMd5Hash = require('webpack-md5-hash');
 const ENV = process.env.NODE_ENV = process.env.ENV = 'production';
 const HOST = process.env.HOST || 'localhost';
 const PORT = process.env.PORT || 8080;
-const METADATA = webpackMerge(commonConfig.metadata, {
-  host: HOST,
-  port: PORT,
-  ENV: ENV,
-  HMR: false
-});
+const METADATA = webpackMerge(
+    commonConfig.metadata,
+    {host: HOST, port: PORT, ENV: ENV, HMR: false, baseUrl: '/v2_dev/'});
 
 module.exports = webpackMerge(commonConfig, {
 
@@ -73,7 +72,8 @@ module.exports = webpackMerge(commonConfig, {
      * The filename of the SourceMaps for the JavaScript files.
      * They are inside the output.path directory.
      *
-     * See: http://webpack.github.io/docs/configuration.html#output-sourcemapfilename
+     * See:
+     * http://webpack.github.io/docs/configuration.html#output-sourcemapfilename
      */
     sourceMapFilename: '[name].[chunkhash].bundle.map',
 
@@ -81,7 +81,8 @@ module.exports = webpackMerge(commonConfig, {
      * The filename of non-entry chunks as relative path
      * inside the output.path directory.
      *
-     * See: http://webpack.github.io/docs/configuration.html#output-chunkfilename
+     * See:
+     * http://webpack.github.io/docs/configuration.html#output-chunkfilename
      */
     chunkFilename: '[id].[chunkhash].chunk.js'
 
@@ -115,13 +116,15 @@ module.exports = webpackMerge(commonConfig, {
     /**
      * Plugin: DefinePlugin
      * Description: Define free variables.
-     * Useful for having development builds with debug logging or adding global constants.
+     * Useful for having development builds with debug logging or adding global
+     * constants.
      *
      * Environment helpers
      *
      * See: https://webpack.github.io/docs/list-of-plugins.html#defineplugin
      */
-    // NOTE: when adding more properties make sure you include them in custom-typings.d.ts
+    // NOTE: when adding more properties make sure you include them in
+    // custom-typings.d.ts
     new DefinePlugin({
       'ENV': JSON.stringify(METADATA.ENV),
       'HMR': METADATA.HMR,
@@ -139,7 +142,8 @@ module.exports = webpackMerge(commonConfig, {
      *
      * See: https://webpack.github.io/docs/list-of-plugins.html#uglifyjsplugin
      */
-    // NOTE: To debug prod builds uncomment //debug lines and comment //prod lines
+    // NOTE: To debug prod builds uncomment //debug lines and comment //prod
+    // lines
     new UglifyJsPlugin({
       // beautify: true, //debug
       // mangle: false, //debug
@@ -156,27 +160,28 @@ module.exports = webpackMerge(commonConfig, {
       // comments: true, //debug
 
 
-      beautify: false, //prod
-      mangle: { screw_ie8 : true, keep_fnames: true }, //prod
-      compress: { screw_ie8: true }, //prod
-      comments: false //prod
+      beautify: false,                               // prod
+      mangle: {screw_ie8: true, keep_fnames: true},  // prod
+      compress: {screw_ie8: true},                   // prod
+      comments: false                                // prod
     }),
 
     /**
      * Plugin: NormalModuleReplacementPlugin
-     * Description: Replace resources that matches resourceRegExp with newResource
+     * Description: Replace resources that matches resourceRegExp with
+     * newResource
      *
-     * See: http://webpack.github.io/docs/list-of-plugins.html#normalmodulereplacementplugin
+     * See:
+     * http://webpack.github.io/docs/list-of-plugins.html#normalmodulereplacementplugin
      */
 
     new NormalModuleReplacementPlugin(
-      /angular2-hmr/,
-      helpers.root('config/modules/angular2-hmr-prod.js')
-    ),
+        /angular2-hmr/, helpers.root('config/modules/angular2-hmr-prod.js')),
 
     /**
      * Plugin: IgnorePlugin
-     * Description: Don’t generate modules for requests matching the provided RegExp.
+     * Description: Don’t generate modules for requests matching the provided
+     * RegExp.
      *
      * See: http://webpack.github.io/docs/list-of-plugins.html#ignoreplugin
      */
@@ -204,27 +209,20 @@ module.exports = webpackMerge(commonConfig, {
    *
    * See: https://github.com/wbuchwalter/tslint-loader
    */
-  tslint: {
-    emitErrors: true,
-    failOnHint: true,
-    resourcePath: 'src'
-  },
+  tslint: {emitErrors: true, failOnHint: true, resourcePath: 'src'},
 
   /**
    * Html loader advanced options
    *
    * See: https://github.com/webpack/html-loader#advanced-options
    */
-  // TODO: Need to workaround Angular 2's html syntax => #id [bind] (event) *ngFor
+  // TODO: Need to workaround Angular 2's html syntax => #id [bind] (event)
+  // *ngFor
   htmlLoader: {
     minimize: true,
     removeAttributeQuotes: false,
     caseSensitive: true,
-    customAttrSurround: [
-      [/#/, /(?:)/],
-      [/\*/, /(?:)/],
-      [/\[?\(?/, /(?:)/]
-    ],
+    customAttrSurround: [[/#/, /(?:)/], [/\*/, /(?:)/], [/\[?\(?/, /(?:)/]],
     customAttrAssign: [/\)?\]?=/]
   },
 

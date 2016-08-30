@@ -1,60 +1,37 @@
 import {Component, ViewEncapsulation} from '@angular/core';
+import {ROUTES} from './app.routes';
 
 @Component({
   selector: 'app',
   encapsulation: ViewEncapsulation.None,
   styleUrls: ['./app.style.css'],
   template: `
-  <md-sidenav-layout>
-    <md-sidenav mode="over">
-      <md-list>
-        <md-list-item>
-          <a [routerLink]=" ['./'] ">
-            Index
-          </a>
-        </md-list-item>
-        <md-list-item>
-          <a [routerLink]=" ['./home'] ">
-            Home
-          </a>
-        </md-list-item>
-        <md-list-item>
-          <a [routerLink]=" ['./detail'] ">
-            Detail
-          </a>
-        </md-list-item>
-        <md-list-item>
-          <a [routerLink]=" ['./about'] ">
-            About
-          </a>
-        </md-list-item>
-      </md-list>
+  <md-sidenav-layout fullscreen>
+    <md-sidenav #sidenav>
+      <md-nav-list>
+        <a md-list-item *ngFor="let route of routes" routerLink="{{route.path}}" routerLinkActive="active">
+          <span md-line> {{route?.data['title']}} </span>
+        </a>
+      </md-nav-list>
     </md-sidenav>
     <md-content>
       <md-toolbar color="primary">
-        <div>
-          <md-toolbar-row>
-            <button md-icon-button (click)="start.open()">
-              <md-icon>menu</md-icon>
-            </button>
-            <span>Wrightstown Full Court Club</span>
-          </md-toolbar-row>
-        </div>
+        <button disableRipple md-icon-button (click)="sidenav.open()">
+          <md-icon>menu</md-icon>
+        </button>
+        Wrightstown Full Court Club
       </md-toolbar>
 
-      <main style="margin:8px">
+      <md-card class="middle-column">
         <router-outlet></router-outlet>
-      </main>
-
+      </md-card>
 
     </md-content>
   </md-sidenav-layout>
   `
 })
 export class App {
-  angularclassLogo = 'assets/img/angularclass-avatar.png';
-  name = 'Angular 2 Webpack Starter';
-  url = 'https://twitter.com/AngularClass';
+  routes = ROUTES.filter(r => r.data && r.data['title']);
 
   constructor() {}
 }
