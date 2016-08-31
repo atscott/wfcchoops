@@ -20,8 +20,6 @@ import {Teams} from './teams/teams.component';
 import {Tournaments} from './tournaments/tournaments.component';
 import {Whs} from './whs/whs.component';
 
-
-
 // Application wide providers
 const APP_PROVIDERS = [...APP_RESOLVER_PROVIDERS];
 
@@ -31,17 +29,17 @@ const APP_PROVIDERS = [...APP_RESOLVER_PROVIDERS];
 @NgModule({
   bootstrap: [ App ],
   declarations: [
-    App,
     About,
-    Home,
-    NoContent,
-    Teams,
-    Whs,
-    Links,
-    OpenGym,
-    Tournaments,
+    App,
     Contact,
-    K4
+    Home,
+    K4,
+    Links,
+    NoContent,
+    OpenGym,
+    Teams,
+    Tournaments,
+    Whs,
   ],
   imports: [ // import Angular's modules
     BrowserModule,

@@ -1,15 +1,15 @@
 import {Component, ViewEncapsulation} from '@angular/core';
-import {ROUTES} from './app.routes';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./app.style.css'],
+  styles: [require('./app.style.css')],
   template: `
   <md-sidenav-layout fullscreen>
-    <md-sidenav #sidenav [mode]="sidenavMode" [opened]="sidenavMode === 'side'" (window:resize)="onResize($event)">
+    <md-sidenav #sidenav [mode]="sidenavMode" [opened]="sidenavMode === 'side'" (window:resize)="onResize($event.target.innerWidth)">
       <md-nav-list>
-        <a md-list-item *ngFor="let route of routes" routerLink="{{route.path}}" routerLinkActive="active">
+        <a md-list-item *ngFor="let route of routes" routerLink="{{route.path}}" routerLinkActive="active" (click)="sidenavMode === 'over' && sidenav.close()">
           <span md-line> {{route?.data['title']}} </span>
         </a>
       </md-nav-list>
@@ -31,12 +31,15 @@ import {ROUTES} from './app.routes';
   `
 })
 export class App {
-  routes = ROUTES.filter(r => r.data && r.data['title']);
+  routes = [];
   sidenavMode = 'side';
 
-  constructor() {}
+  constructor(private router: Router) {}
 
-  ngOnInit() { this.onResize(); }
+  ngOnInit() {
+    this.onResize(window.innerWidth);
+    this.routes = this.router.config.filter(r => r.data && r.data['title']);
+  }
 
-  onResize() { this.sidenavMode = window.innerWidth < 500 ? 'over' : 'side'; }
+  onResize(width) { this.sidenavMode = width < 700 ? 'over' : 'side'; }
 }
