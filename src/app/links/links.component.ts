@@ -28,5 +28,6 @@ import {Component} from '@angular/core';
   `
 })
 export class Links {
-  constructor() {}
+  constructor() {
+  }
 }

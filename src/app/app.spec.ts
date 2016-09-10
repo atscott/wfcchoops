@@ -11,11 +11,11 @@ import {MdModule} from './md.module';
 class BlankCmp {
 }
 
-let config: Routes = [{path: '', component: BlankCmp}];
+let config:Routes = [{path: '', component: BlankCmp}];
 
 describe('App', () => {
 
-  let fixture: ComponentFixture<App>;
+  let fixture:ComponentFixture<App>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -25,7 +25,9 @@ describe('App', () => {
       providers: [provideRoutes(config)]
     });
     TestBed.compileComponents().then(
-        () => { fixture = TestBed.createComponent(App); });
+        () => {
+          fixture = TestBed.createComponent(App);
+        });
 
   }));
 
@@ -35,14 +37,14 @@ describe('App', () => {
   });
 
   it('should set sidenav mode to "over" for small screens', async(() => {
-       fixture.detectChanges();
+    fixture.detectChanges();
 
-       fixture.componentInstance.onResize(300);
-       expect(fixture.componentInstance.sidenavMode).toEqual('over');
+    fixture.componentInstance.onResize(300);
+    expect(fixture.componentInstance.sidenavMode).toEqual('over');
 
-       fixture.detectChanges();
-       const sidenav = fixture.nativeElement.querySelector('md-sidenav');
-       expect(sidenav.getAttribute('ng-reflect-mode')).toEqual('over');
-     }));
+    fixture.detectChanges();
+    const sidenav = fixture.nativeElement.querySelector('md-sidenav');
+    expect(sidenav.getAttribute('ng-reflect-mode')).toEqual('over');
+  }));
 
 });

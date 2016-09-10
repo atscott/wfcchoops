@@ -10,25 +10,27 @@ import {Title} from './title';
 describe('Home', () => {
   // provide our implementations or mocks to the dependency injector
   beforeEach(() => addProviders([
-               BaseRequestOptions, MockBackend, {
-                 provide: Http,
-                 useFactory: function(backend, defaultOptions) {
-                   return new Http(backend, defaultOptions);
-                 },
-                 deps: [MockBackend, BaseRequestOptions]
-               },
-               Title, Home
-             ]));
+    BaseRequestOptions, MockBackend, {
+      provide: Http,
+      useFactory: function (backend, defaultOptions) {
+        return new Http(backend, defaultOptions);
+      },
+      deps: [MockBackend, BaseRequestOptions]
+    },
+    Title, Home
+  ]));
 
   it('should have a title',
-     inject([Home], (home) => { expect(!!home.title).toEqual(true); }));
+      inject([Home], (home) => {
+        expect(!!home.title).toEqual(true);
+      }));
 
   it('should log ngOnInit', inject([Home], (home) => {
-       spyOn(console, 'log');
-       expect(console.log).not.toHaveBeenCalled();
+    spyOn(console, 'log');
+    expect(console.log).not.toHaveBeenCalled();
 
-       home.ngOnInit();
-       expect(console.log).toHaveBeenCalled();
-     }));
+    home.ngOnInit();
+    expect(console.log).toHaveBeenCalled();
+  }));
 
 });

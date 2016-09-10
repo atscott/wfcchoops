@@ -11,5 +11,6 @@ import {Component, ViewEncapsulation} from '@angular/core';
   templateUrl: './tournaments.template.html'
 })
 export class Tournaments {
-  constructor() {}
+  constructor() {
+  }
 }

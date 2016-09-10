@@ -7,7 +7,10 @@ import {Component, ViewEncapsulation} from '@angular/core';
   templateUrl: './about.template.html'
 })
 export class About {
-  constructor() {}
+  constructor() {
+  }
 
-  ngOnInit() { console.log('hello!!! `About` component'); }
+  ngOnInit() {
+    console.log('hello!!! `About` component');
+  }
 }

@@ -11,7 +11,10 @@ import {XLarge} from './x-large';
   templateUrl: './home.template.html'
 })
 export class Home {
-  constructor(public title: Title) {}
+  constructor(public title:Title) {
+  }
 
-  ngOnInit() { console.log('hello `Home` component'); }
+  ngOnInit() {
+    console.log('hello `Home` component');
+  }
 }

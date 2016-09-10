@@ -4,14 +4,9 @@ import {Component} from '@angular/core';
   selector: 'contact',
   styles: [`
   `],
-  template: `
-<ul><li>Jim and Kathy Hansen — WFCC Co-Presidents <a href="mailto:hansen6@new.rr.com">hansen6@new.rr.com</a>
-    </li>
-    <li>Cory Haese — WHS Boys Varsity Coach <a href="mailto:haese@wrightstown.k12.wi.us">haese@wrightstown.k12.wi.us</a> </li>
-    <li>Mike Froehlke — WHS Girls Varsity Coach <a href="mailto:tigergirlsbasketball@gmail.com">tigergirlsbasketball@gmail.com</a></li></ul><ul>
-</ul>
-  `
+  templateUrl: './contact.template.html'
 })
 export class Contact {
-  constructor() {}
+  constructor() {
+  }
 }

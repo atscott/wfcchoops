@@ -19,5 +19,6 @@ There are no open gyms scheduled for this time.
   `
 })
 export class OpenGym {
-  constructor() {}
+  constructor() {
+  }
 }

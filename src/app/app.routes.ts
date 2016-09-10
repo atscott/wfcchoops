@@ -11,7 +11,7 @@ import {Teams} from './teams/teams.component';
 import {Tournaments} from './tournaments/tournaments.component';
 import {Whs} from './whs/whs.component';
 
-export const ROUTES: Routes = [
+export const ROUTES:Routes = [
   {path: '', component: Home},
   {path: 'home', component: Home, data: {title: 'Home'}},
   {path: 'about', component: About, data: {title: 'About us'}},

@@ -35,12 +35,15 @@ export class App {
   routes = [];
   sidenavMode = 'side';
 
-  constructor() {}
+  constructor() {
+  }
 
   ngOnInit() {
     this.onResize(window.innerWidth);
     this.routes = ROUTES.filter(r => r.data && r.data['title']);
   }
 
-  onResize(width) { this.sidenavMode = width < 700 ? 'over' : 'side'; }
+  onResize(width) {
+    this.sidenavMode = width < 700 ? 'over' : 'side';
+  }
 }

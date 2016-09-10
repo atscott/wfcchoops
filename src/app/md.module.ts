@@ -15,5 +15,7 @@ import {MdToolbarModule} from '@angular2-material/toolbar';
   ]
 })
 export class MdModule {
-  static forRoot(): ModuleWithProviders { return {ngModule: MdModule}; }
+  static forRoot():ModuleWithProviders {
+    return {ngModule: MdModule};
+  }
 }

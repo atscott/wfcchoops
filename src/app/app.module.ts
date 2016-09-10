@@ -27,7 +27,7 @@ const APP_PROVIDERS = [...APP_RESOLVER_PROVIDERS];
  * `AppModule` is the main entry point into Angular2's bootstraping process
  */
 @NgModule({
-  bootstrap: [ App ],
+  bootstrap: [App],
   declarations: [
     About,
     App,
@@ -46,7 +46,7 @@ const APP_PROVIDERS = [...APP_RESOLVER_PROVIDERS];
     FormsModule,
     HttpModule,
     MdModule.forRoot(),
-    RouterModule.forRoot(ROUTES, { useHash: true })
+    RouterModule.forRoot(ROUTES, {useHash: true})
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
     ENV_PROVIDERS,
@@ -54,5 +54,6 @@ const APP_PROVIDERS = [...APP_RESOLVER_PROVIDERS];
   ]
 })
 export class AppModule {
-  constructor(public appRef: ApplicationRef) {}
+  constructor(public appRef:ApplicationRef) {
+  }
 }
