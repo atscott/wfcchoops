@@ -16,11 +16,11 @@ md-nav-list a.active .md-list-item {
 }
 
 md-nav-list a[md-list-item] div.md-list-item {
-  height: 75px;
+  height: 80px;
 }
 
 md-nav-list a.active [md-line] {
-  color: blue;
+  color: #1565c0;
 }
 
 md-nav-list a[md-list-item] img[md-list-icon] {
@@ -31,7 +31,7 @@ md-nav-list a[md-list-item] img[md-list-icon] {
 
 md-card md-divider {
   margin: 36px 0 36px 0;
-  border-top: 1px solid blue;
+  border-top: 1px solid #1565c0;
 }
 
 [flex] {
@@ -47,3 +47,39 @@ md-card md-divider {
   flex: 1;
   -webkit-flex: 1;
 }
+
+md-toolbar.md-custom {
+  background: #2196f3;
+  color: white;
+}
+
+.sidenav-banner {
+  height: 120px;
+  overflow: hidden;
+  position: relative;
+}
+
+img.blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 120%;
+  margin-right: 10%;
+  height: auto;
+  z-index: -1;
+  background-color: white;
+  -webkit-filter: blur(15px);
+}
+
+body {
+  background: #e3f2fd;
+}
+
+md-ink-bar {
+  background-color: #01579b!important;
+}
+
+.md-tab-label:focus {
+  background-color: rgba(187, 222, 251, 0.3)!important;
+}
+
