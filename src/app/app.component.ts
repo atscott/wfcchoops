@@ -9,8 +9,10 @@ import {ROUTES} from './app.routes.ts';
   template: `
   <md-sidenav-layout fullscreen>
     <md-sidenav #sidenav [mode]="sidenavMode" [opened]="sidenavMode === 'side'" (window:resize)="onResize($event.target.innerWidth)">
+      <img src="assets/img/tigercropped.jpg">
       <md-nav-list>
         <a md-list-item *ngFor="let route of routes" routerLink="{{route.path}}" routerLinkActive="active" (click)="sidenavMode === 'over' && sidenav.close()">
+          <img md-list-icon [src]="route?.data.icon">
           <span md-line> {{route?.data['title']}} </span>
         </a>
       </md-nav-list>
@@ -20,7 +22,7 @@ import {ROUTES} from './app.routes.ts';
         <button disableRipple md-icon-button (click)="sidenav.toggle()" *ngIf="sidenavMode === 'over'">
           <md-icon>menu</md-icon>
         </button>
-        Wrightstown Full Court Club
+        <h2>Wrightstown Full Court Club</h2>
       </md-toolbar>
 
       <md-card class="middle-column">

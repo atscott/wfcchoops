@@ -13,22 +13,22 @@ import {Whs} from './whs/whs.component';
 
 export const ROUTES:Routes = [
   {path: '', component: Home},
-  {path: 'home', component: Home, data: {title: 'Home'}},
-  {path: 'about', component: About, data: {title: 'About us'}},
+  {path: 'home', component: Home, data: {title: 'Home', icon: 'assets/img/Basketball-home.png'}},
+  {path: 'about', component: About, data: {title: 'About us', icon: 'assets/img/Basketball-about.png'}},
   {
     path: 'tournaments',
     component: Tournaments,
-    data: {title: 'WFCC / local tournaments'}
+    data: {title: 'WFCC / local tournaments', icon: 'assets/img/Basketball-tournaments.png'}
   },
-  {path: 'teams', component: Teams, data: {title: 'WFCC teams'}},
-  {path: 'whs', component: Whs, data: {title: 'WHS basketball'}},
-  {path: 'k-4', component: K4, data: {title: 'WFCC K-4 programs'}},
-  {path: 'links', component: Links, data: {title: 'Links'}},
+  {path: 'teams', component: Teams, data: {title: 'WFCC teams', icon: 'assets/img/Basketball-teams.png'}},
+  {path: 'whs', component: Whs, data: {title: 'WHS basketball', icon: 'assets/img/Basketball-whs.png'}},
+  {path: 'k-4', component: K4, data: {title: 'WFCC K-4 programs', icon: 'assets/img/Basketball-k-8.png'}},
+  {path: 'links', component: Links, data: {title: 'Links', icon: 'assets/img/Basketball-links.png'}},
   {
     path: 'opengym',
     component: OpenGym,
-    data: {title: 'WFCC open gym schedule'}
+    data: {title: 'WFCC open gym schedule', icon: 'assets/img/Basketball-opengym.png'}
   },
-  {path: 'contact', component: Contact, data: {title: 'Contact us'}},
+  {path: 'contact', component: Contact, data: {title: 'Contact us', icon: 'assets/img/Basketball-contact.png'}},
   {path: '**', component: NoContent},
 ];

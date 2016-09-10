@@ -1,16 +1,30 @@
 .layout-fill {
-    margin: 0;
-    width: 100%;
-    min-height: 100%;
-    height: 100%;
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
 }
 
 .middle-column {
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 md-nav-list a.active .md-list-item {
-    background: blue;
+  background: #efefef;
+}
+
+md-nav-list a[md-list-item] div.md-list-item {
+  height: 75px;
+}
+
+md-nav-list a.active [md-line] {
+  color: blue;
+}
+
+md-nav-list a[md-list-item] img[md-list-icon] {
+  height: auto;
+  width: 100px;
+  border-radius: initial;
 }
