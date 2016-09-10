@@ -28,3 +28,22 @@ md-nav-list a[md-list-item] img[md-list-icon] {
   width: 100px;
   border-radius: initial;
 }
+
+md-card md-divider {
+  margin: 36px 0 36px 0;
+  border-top: 1px solid blue;
+}
+
+[flex] {
+  display: flex;
+}
+
+[layout-align="center center"] {
+  align-items: center;
+  justify-content: center;
+}
+
+[layout="column"] {
+  flex: 1;
+  -webkit-flex: 1;
+}

@@ -27,6 +27,10 @@ import {ROUTES} from './app.routes.ts';
 
       <md-card class="middle-column">
         <router-outlet></router-outlet>
+        <md-divider></md-divider>
+        <div flex layout-align="center center" layout="column">
+          <img src="assets/img/FullCourtLogo-216.png">
+        </div>
       </md-card>
 
     </md-content>
