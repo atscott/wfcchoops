@@ -21,7 +21,7 @@ export const ROUTES:Routes = [
     data: {title: 'WFCC / local tournaments', icon: 'assets/img/Basketball-tournaments.png'}
   },
   {path: 'teams', component: Teams, data: {title: 'WFCC teams', icon: 'assets/img/Basketball-teams.png'}},
-  {path: 'whs', component: Whs, data: {title: 'WHS basketball', icon: 'assets/img/Basketball-whs.png'}},
+  {path: 'whs', component: Whs, data: {title: 'WHS basketball', icon: 'assets/img/Basketball-WHS.png'}},
   {path: 'k-4', component: K4, data: {title: 'WFCC K-4 programs', icon: 'assets/img/Basketball-k-8.png'}},
   {path: 'links', component: Links, data: {title: 'Links', icon: 'assets/img/Basketball-links.png'}},
   {
