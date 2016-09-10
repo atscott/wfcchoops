@@ -1,5 +1,6 @@
 import {Component, ViewEncapsulation} from '@angular/core';
 import {Router} from '@angular/router';
+import {ROUTES} from './app.routes.ts';
 
 @Component({
   selector: 'app',
@@ -34,11 +35,11 @@ export class App {
   routes = [];
   sidenavMode = 'side';
 
-  constructor(private router: Router) {}
+  constructor() {}
 
   ngOnInit() {
     this.onResize(window.innerWidth);
-    this.routes = this.router.config.filter(r => r.data && r.data['title']);
+    this.routes = ROUTES.filter(r => r.data && r.data['title']);
   }
 
   onResize(width) { this.sidenavMode = width < 700 ? 'over' : 'side'; }
