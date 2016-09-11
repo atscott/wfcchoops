@@ -48,7 +48,7 @@ const APP_PROVIDERS = [...APP_RESOLVER_PROVIDERS];
     HttpModule,
     MdModule.forRoot(),
     LayoutModule.forRoot(),
-    RouterModule.forRoot(ROUTES, {useHash: true})
+    RouterModule.forRoot(ROUTES, {useHash: ENV !== 'production'})
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
     ENV_PROVIDERS,
