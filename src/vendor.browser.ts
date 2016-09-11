@@ -13,6 +13,7 @@ import '@angular/common';
 import '@angular/forms';
 import '@angular/http';
 import '@angular/router';
+import '@angular2-material/core/overlay/overlay.css';
 
 // AngularClass
 import '@angularclass/hmr';
