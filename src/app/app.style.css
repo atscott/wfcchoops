@@ -1,10 +1,3 @@
-.layout-fill {
-  margin: 0;
-  width: 100%;
-  min-height: 100%;
-  height: 100%;
-}
-
 .middle-column {
   max-width: 700px;
   margin-left: auto;
@@ -32,20 +25,6 @@ md-nav-list a[md-list-item] img[md-list-icon] {
 md-card md-divider {
   margin: 36px 0 36px 0;
   border-top: 1px solid #1565c0;
-}
-
-[flex] {
-  display: flex;
-}
-
-[layout-align="center center"] {
-  align-items: center;
-  justify-content: center;
-}
-
-[layout="column"] {
-  flex: 1;
-  -webkit-flex: 1;
 }
 
 md-toolbar.md-custom {

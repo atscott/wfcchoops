@@ -4,18 +4,19 @@ import {HttpModule} from '@angular/http';
 import {BrowserModule} from '@angular/platform-browser';
 import {RouterModule} from '@angular/router';
 
+import {APP_RESOLVER_PROVIDERS} from './app.resolver';
 import {About} from './about';
 import {App} from './app.component';
-import {APP_RESOLVER_PROVIDERS} from './app.resolver';
-import {ROUTES} from './app.routes';
 import {Contact} from './contact/contact.component';
 import {ENV_PROVIDERS} from './environment';
 import {Home} from './home';
 import {K4} from './k4/k4.component';
+import {LayoutModule} from './layout/layout.module';
 import {Links} from './links/links.component';
 import {MdModule} from './md.module';
 import {NoContent} from './no-content';
 import {OpenGym} from './opengym/opengym.component';
+import {ROUTES} from './app.routes';
 import {Teams} from './teams/teams.component';
 import {Tournaments} from './tournaments/tournaments.component';
 import {Whs} from './whs/whs.component';
@@ -46,6 +47,7 @@ const APP_PROVIDERS = [...APP_RESOLVER_PROVIDERS];
     FormsModule,
     HttpModule,
     MdModule.forRoot(),
+    LayoutModule.forRoot(),
     RouterModule.forRoot(ROUTES, {useHash: true})
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection

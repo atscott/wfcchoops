@@ -154,6 +154,8 @@ module.exports = {
        */
       {test: /\.css$/, loaders: ['to-string-loader', 'css-loader']},
 
+      {test: /\.scss$/, loaders: ['style', 'css', 'sass']},
+
       /* Raw loader support for *.html
        * Returns file content as string
        *
