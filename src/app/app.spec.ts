@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
-import {async, ComponentFixture, inject, TestBed} from '@angular/core/testing';
-import {addProviders, inject} from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {provideRoutes, RouterModule, Routes} from '@angular/router';
 import {RouterTestingModule} from '@angular/router/testing';
 

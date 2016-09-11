@@ -5,7 +5,7 @@ import {ROUTES} from './app.routes.ts';
   selector: 'app',
   encapsulation: ViewEncapsulation.None,
   styles: [require('./app.style.css')],
-  templateUrl: './app.template.html'
+  template: require('./app.template.html')
 })
 export class App {
   routes = [];
