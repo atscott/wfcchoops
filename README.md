@@ -95,3 +95,4 @@ This project uses clang-format with the Google style option for .ts and .js file
   * [ ] Format all js/ts files with clang-format
   * [ ] Find a good formatter for html files
   * [ ] Remove unused images and docs from assets
+  * [ ] Make a better loading page
