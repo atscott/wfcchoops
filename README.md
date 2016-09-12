@@ -91,7 +91,6 @@ This project uses clang-format with the Google style option for .ts and .js file
   * [ ] Remove unused webpack starter code
   * [ ] Get integration tests working
   * [ ] Add tests for the layout directive
-  * [ ] Add tests for other components
   * [ ] Separate the app.component.ts into smaller components
   * [ ] Format all js/ts files with clang-format
   * [ ] Find a good formatter for html files
