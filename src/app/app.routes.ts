@@ -1,4 +1,4 @@
-import {RouterModule, Routes} from '@angular/router';
+import {Routes} from '@angular/router';
 
 import {About} from './about';
 import {Contact} from './contact/contact.component';
@@ -12,7 +12,7 @@ import {Tournaments} from './tournaments/tournaments.component';
 import {Whs} from './whs/whs.component';
 
 export const ROUTES:Routes = [
-  {path: '', component: Home},
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: Home, data: {title: 'Home', icon: 'assets/img/Basketball-home.png'}},
   {path: 'about', component: About, data: {title: 'About us', icon: 'assets/img/Basketball-about.png'}},
   {

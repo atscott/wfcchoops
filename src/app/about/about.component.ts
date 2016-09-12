@@ -9,8 +9,4 @@ import {Component, ViewEncapsulation} from '@angular/core';
 export class About {
   constructor() {
   }
-
-  ngOnInit() {
-    console.log('hello!!! `About` component');
-  }
 }
