@@ -32,6 +32,10 @@ md-toolbar.md-custom {
   color: white;
 }
 
+md-toolbar-row {
+  margin: 8px 0 8px 0;
+}
+
 .sidenav-banner {
   height: 120px;
   overflow: hidden;
