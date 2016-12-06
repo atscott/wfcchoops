@@ -8,7 +8,7 @@ import {APP_RESOLVER_PROVIDERS} from './app.resolver';
 import {About} from './about';
 import {App} from './app.component';
 import {Contact} from './contact/contact.component';
-import {ENV_PROVIDERS} from './environment';
+import {environment} from '../environments/environment';
 import {Home} from './home';
 import {K4} from './k4/k4.component';
 import {LayoutModule} from './layout/layout.module';
@@ -48,10 +48,9 @@ const APP_PROVIDERS = [...APP_RESOLVER_PROVIDERS];
     HttpModule,
     MdModule.forRoot(),
     LayoutModule.forRoot(),
-    RouterModule.forRoot(ROUTES, {useHash: ENV !== 'production'})
+    RouterModule.forRoot(ROUTES, {useHash: !environment.production})
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
-    ENV_PROVIDERS,
     APP_PROVIDERS
   ]
 })
