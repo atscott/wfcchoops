@@ -1,14 +1,12 @@
 dependencies:
   post:
-    - npm run build:prod
-    - zip -r dist.zip dist
+    - ng build prod
 test:
   post:
     - bash <(curl -s https://codecov.io/bash)
 general:
   artifacts:
     - "dist"
-    - "dist.zip"
 deployment:
   production:
     branch: master
