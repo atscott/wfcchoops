@@ -14,3 +14,7 @@ deployment:
     branch: master
     commands:
       - ./deploy_prod.sh
+  test:
+    branch: ngcli_history
+    commands:
+      - firebase deploy --token=$FIREBASE_TOKEN --non-interactive
