@@ -15,7 +15,7 @@ deployment:
     commands:
       - ./deploy_prod.sh
   testing:
-    branches:
+    branch:
       ignore:
         - master
     commands:
