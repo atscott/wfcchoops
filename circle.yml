@@ -1,6 +1,6 @@
 dependencies:
   pre:
-    - npm install @angular/tsc-wrapped autoprefixer enhanced-resolve
+    - npm install @angular/tsc-wrapped autoprefixer enhanced-resolve loader-utils
   post:
     - ng build --env=prod
 test:
