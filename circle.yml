@@ -14,9 +14,3 @@ deployment:
     branch: master
     commands:
       - ./deploy_prod.sh
-  testing:
-    branch:
-      ignore:
-        - master
-    commands:
-      - firebase deploy --token=$FIREBASE_TOKEN --non-interactive
