@@ -17,4 +17,4 @@ deployment:
   test:
     branch: ngcli_history
     commands:
-      - firebase deploy --token=$FIREBASE_TOKEN --non-interactive
+      - firebase deploy --token=$FIREBASE_TOKEN --project=wfcchoops-f84d0 --non-interactive
