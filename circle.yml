@@ -1,9 +1,8 @@
 dependencies:
   pre:
-    - npm install -g angular-cli
-    - npm install @angular/tsc-wrapped autoprefixer
+    - npm install angular-cli@latest -g
   post:
-    - ng build prod
+    - ng build --env=prod
 test:
   post:
     - bash <(curl -s https://codecov.io/bash)
@@ -15,3 +14,9 @@ deployment:
     branch: master
     commands:
       - ./deploy_prod.sh
+  testing:
+    branches:
+      ignore:
+        - master
+    commands:
+    - firebase deploy --token=$FIREBASE_TOKEN --non-interactive
