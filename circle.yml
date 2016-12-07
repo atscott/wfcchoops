@@ -1,9 +1,6 @@
 dependencies:
   pre:
-    - npm install npm@latest -g
-    - npm uninstall -g angular-cli
-    - npm cache clean
-    - npm install -g angular-cli@latest
+    - npm install @angular/tsc-wrapped autoprefixer
   post:
     - ng build --env=prod
 test:
