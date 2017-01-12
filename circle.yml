@@ -1,6 +1,6 @@
 dependencies:
   pre:
-    - npm install @angular/tsc-wrapped autoprefixer enhanced-resolve loader-utils firebase-tools
+    - npm install @angular/tsc-wrapped autoprefixer enhanced-resolve loader-utils firebase-tools postcss-loader @ngtools/webpack
   post:
     - ng build --env=prod
 test:
