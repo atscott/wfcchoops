@@ -4,12 +4,7 @@
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "lint": "tslint \"src/**/*.ts\"",
-    "test": "ng test",
-    "pree2e": "webdriver-manager update --standalone false --gecko false",
-    "e2e": "protractor"
+    "test": "./node_modules/.bin/karma start --single-run --browsers PhantomJS"
   },
   "private": true,
   "dependencies": {
@@ -47,7 +42,9 @@
     "karma-chrome-launcher": "^2.0.0",
     "karma-cli": "^1.0.1",
     "karma-jasmine": "^1.0.2",
+    "karma-phantomjs-launcher": "^1.0.2",
     "karma-remap-istanbul": "^0.2.1",
+    "phantomjs": "^2.1.7",
     "protractor": "~4.0.13",
     "ts-node": "1.2.1",
     "tslint": "^4.0.2",
