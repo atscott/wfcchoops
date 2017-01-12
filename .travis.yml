@@ -16,7 +16,7 @@ before_script:
   - sh -e /etc/init.d/xvfb start
 
 script:
-  - npm travistest
+  - npm test
   - ng build prod
 
 after_success:
