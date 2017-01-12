@@ -3,7 +3,7 @@
 (https://codecov.io/gh/atscott/wfcchoops)
 
 [![TravisCI](https://travis-ci.org/atscott/wfcchoops.svg?branch=master)]
-(https://circleci.com/gh/atscott/wfcchoops)
+(https://travis-ci.org/atscott/wfcchoops)
 
 # WFCC Hoops
 
