@@ -2,8 +2,6 @@ dependencies:
   pre:
     - npm install -g npm@latest
     - npm install -g angular-cli@latest
-    - npm install webpack@latest
-    - npm install reflect-metadata
   post:
     - ng build --env=prod
 test:
