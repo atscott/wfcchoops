@@ -12,6 +12,9 @@ import {MdToolbarModule} from '@angular2-material/toolbar';
   exports: [
     MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule,
     MdSidenavModule, MdTabsModule, MdListModule
+  ],
+  imports: [
+    MdIconModule.forRoot()
   ]
 })
 export class MdModule {
