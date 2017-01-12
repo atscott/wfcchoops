@@ -49,3 +49,5 @@ This project uses clang-format with the Google style option for .ts and .js file
   * [  ] Find a good formatter for html files
   * [  ] Remove unused images and docs from assets
   * [  ] Make a better loading page
+  * [  ] Use angular/flex-layout instead of custom layout module
+  * [  ] remove use of mdmodule

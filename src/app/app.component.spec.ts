@@ -2,30 +2,30 @@ import {Component} from '@angular/core';
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {provideRoutes, RouterModule, Routes} from '@angular/router';
 import {RouterTestingModule} from '@angular/router/testing';
+import {MaterialModule} from '@angular/material';
 
-import {App} from './app.component';
-import {MdModule} from './md.module';
+import {AppComponent} from './app.component';
 
-@Component({selector: 'as-test-cmp', template: ''})
+@Component({selector: 'app-test-cmp', template: ''})
 class BlankCmp {
 }
 
-let config:Routes = [{path: '', component: BlankCmp}];
+let config: Routes = [{path: '', component: BlankCmp}];
 
 describe('App', () => {
 
-  let fixture:ComponentFixture<App>;
+  let fixture: ComponentFixture<AppComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [App],
-      imports: [MdModule.forRoot(), RouterTestingModule, RouterModule],
+      declarations: [AppComponent, BlankCmp],
+      imports: [RouterTestingModule, RouterModule, MaterialModule.forRoot()],
       // TODO: routertestingmodule.withroutes when it's available
       providers: [provideRoutes(config)]
     });
     TestBed.compileComponents().then(
         () => {
-          fixture = TestBed.createComponent(App);
+          fixture = TestBed.createComponent(AppComponent);
         });
 
   }));

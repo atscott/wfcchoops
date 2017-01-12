@@ -1,5 +1,5 @@
 import {Component, ViewEncapsulation} from '@angular/core';
-import {ROUTES} from './app.routes.ts';
+import {ROUTES} from './app.routes';
 
 @Component({
   selector: 'app',
@@ -10,7 +10,7 @@ import {ROUTES} from './app.routes.ts';
   ],
   template: require('./app.template.html')
 })
-export class App {
+export class AppComponent {
   routes = [];
   sidenavMode = 'side';
 

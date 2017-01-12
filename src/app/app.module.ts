@@ -6,7 +6,7 @@ import {RouterModule} from '@angular/router';
 
 import {APP_RESOLVER_PROVIDERS} from './app.resolver';
 import {About} from './about';
-import {App} from './app.component';
+import {AppComponent} from './app.component';
 import {Contact} from './contact/contact.component';
 import {environment} from '../environments/environment';
 import {Home} from './home';
@@ -28,10 +28,10 @@ const APP_PROVIDERS = [...APP_RESOLVER_PROVIDERS];
  * `AppModule` is the main entry point into Angular2's bootstraping process
  */
 @NgModule({
-  bootstrap: [App],
+  bootstrap: [AppComponent],
   declarations: [
     About,
-    App,
+    AppComponent,
     Contact,
     Home,
     K4,
