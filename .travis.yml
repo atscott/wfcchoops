@@ -1,0 +1,8 @@
+before_install:
+  - npm install -g npm
+install:
+  - npm install
+script:
+  - ng test
+  - ng build prod
+
