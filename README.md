@@ -50,3 +50,5 @@ This project uses clang-format with the Google style option for .ts and .js file
   * [ ] Make a better loading page
   * [x] Use angular/flex-layout instead of custom layout module
   * [ ] remove use of mdmodule
+  * [ ] Update to latest Angular version
+  * [ ] Update to latest Angular Material version
