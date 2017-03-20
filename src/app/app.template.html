@@ -1,6 +1,6 @@
 <md-sidenav-layout fullscreen>
   <md-sidenav #sidenav [mode]="sidenavMode" [opened]="sidenavMode === 'side'" (window:resize)="onResize($event.target.innerWidth)">
-    <div class="sidenav-banner" flex layout-align="center center" layout="column">
+    <div class="sidenav-banner" fxFlex fxLayoutAlign="center center" fxLayout="column">
       <img src="assets/img/tigercropped.jpg">
       <img src="assets/img/tigercropped.jpg" class="blur">
     </div>
@@ -22,7 +22,7 @@
     <md-card class="middle-column">
       <router-outlet></router-outlet>
       <md-divider></md-divider>
-      <div flex layout-align="center center" layout="column">
+      <div fxFlex fxLayoutAlign="center center" fxLayout="column">
         <img src="assets/img/FullCourtLogo-216.png">
       </div>
     </md-card>
