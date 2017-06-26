@@ -4,7 +4,7 @@
       <img src="assets/img/tigercropped.jpg">
       <img src="assets/img/tigercropped.jpg" class="blur">
     </div>
-    <md-nav-list>
+    <md-nav-list fxFlex="grow">
       <a md-list-item *ngFor="let route of routes" routerLink="{{route.path}}" routerLinkActive="active" (click)="sidenavMode === 'over' && sidenav.close()">
         <img md-list-icon [src]="route?.data.icon">
         <span md-line> {{route?.data['title']}} </span>
@@ -19,10 +19,10 @@
       <h2>Wrightstown Full Court Club</h2>
     </md-toolbar>
 
-    <md-card class="middle-column">
+    <md-card class="middle-column" fxLayout="column">
       <router-outlet></router-outlet>
       <md-divider></md-divider>
-      <div fxFlex fxLayoutAlign="center center" fxLayout="column">
+      <div fxLayoutAlign="center center" fxLayout="column">
         <img src="assets/img/FullCourtLogo-216.png">
       </div>
     </md-card>

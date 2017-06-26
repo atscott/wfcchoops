@@ -49,6 +49,7 @@ This project uses clang-format with the Google style option for .ts and .js file
   * [ ] Remove unused images and docs from assets
   * [ ] Make a better loading page
   * [x] Use angular/flex-layout instead of custom layout module
-  * [ ] remove use of mdmodule
-  * [ ] Update to latest Angular version
-  * [ ] Update to latest Angular Material version
+  * [x] remove use of mdmodule
+  * [x] Update to latest Angular version
+  * [x] Update to latest Angular Material version
+  * [ ] Theme the app in a way more in line with Angular Material
