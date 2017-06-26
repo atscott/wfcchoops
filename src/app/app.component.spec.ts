@@ -19,7 +19,7 @@ describe('App', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [AppComponent, BlankCmp],
-      imports: [MdModule.forRoot(), RouterTestingModule, RouterModule],
+      imports: [MdModule, RouterTestingModule, RouterModule],
       // TODO: routertestingmodule.withroutes when it's available
       providers: [provideRoutes(config)]
     });

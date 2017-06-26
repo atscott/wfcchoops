@@ -1,6 +1,6 @@
-<md-sidenav-layout fullscreen>
-  <md-sidenav #sidenav [mode]="sidenavMode" [opened]="sidenavMode === 'side'" (window:resize)="onResize($event.target.innerWidth)">
-    <div class="sidenav-banner" fxFlex fxLayoutAlign="center center" fxLayout="column">
+<md-sidenav-container fullscreen>
+  <md-sidenav fxLayout="column" #sidenav [mode]="sidenavMode" [opened]="sidenavMode === 'side'" (window:resize)="onResize($event.target.innerWidth)">
+    <div class="sidenav-banner" fxFlex="noshrink" fxLayoutAlign="center center" fxLayout="column">
       <img src="assets/img/tigercropped.jpg">
       <img src="assets/img/tigercropped.jpg" class="blur">
     </div>
@@ -27,4 +27,4 @@
       </div>
     </md-card>
   </div>
-</md-sidenav-layout>
+</md-sidenav-container>

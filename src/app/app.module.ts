@@ -4,6 +4,7 @@ import {HttpModule} from '@angular/http';
 import {BrowserModule} from '@angular/platform-browser';
 import {RouterModule} from '@angular/router';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {APP_RESOLVER_PROVIDERS} from './app.resolver';
 import {About} from './about';
@@ -43,11 +44,12 @@ const APP_PROVIDERS = [...APP_RESOLVER_PROVIDERS];
     Whs,
   ],
   imports: [ // import Angular's modules
+    BrowserAnimationsModule,
     BrowserModule,
     FormsModule,
     HttpModule,
-    MdModule.forRoot(),
-    FlexLayoutModule.forRoot(),
+    MdModule,
+    FlexLayoutModule,
     RouterModule.forRoot(ROUTES, {useHash: !environment.production})
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
