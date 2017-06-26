@@ -1,9 +1,8 @@
-import {Component, ViewEncapsulation} from '@angular/core';
+import {Component} from '@angular/core';
 import {ROUTES} from './app.routes';
 
 @Component({
   selector: 'app',
-  encapsulation: ViewEncapsulation.None,
   styleUrls: ['./app.style.css'],
   templateUrl: './app.template.html'
 })
