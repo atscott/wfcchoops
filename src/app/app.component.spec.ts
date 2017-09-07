@@ -5,6 +5,7 @@ import {RouterTestingModule} from '@angular/router/testing';
 import {MdModule} from './md.module';
 
 import {AppComponent} from './app.component';
+import {AppModule} from './app.module';
 
 @Component({selector: 'app-test-cmp', template: ''})
 class BlankCmp {
@@ -18,8 +19,8 @@ describe('App', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [AppComponent, BlankCmp],
-      imports: [MdModule, RouterTestingModule, RouterModule],
+      declarations: [BlankCmp],
+      imports: [AppModule, MdModule, RouterTestingModule, RouterModule],
       // TODO: routertestingmodule.withroutes when it's available
       providers: [provideRoutes(config)]
     });
