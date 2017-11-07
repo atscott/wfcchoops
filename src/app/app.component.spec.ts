@@ -43,7 +43,7 @@ describe('App', () => {
     expect(fixture.componentInstance.sidenavMode).toEqual('over');
 
     fixture.detectChanges();
-    const sidenav = fixture.nativeElement.querySelector('md-sidenav');
+    const sidenav = fixture.nativeElement.querySelector('mat-sidenav');
     expect(sidenav.getAttribute('ng-reflect-mode')).toEqual('over');
   }));
 
