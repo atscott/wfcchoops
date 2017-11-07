@@ -1,30 +1,30 @@
-<md-sidenav-container fullscreen>
-  <md-sidenav fxLayout="column" #sidenav [mode]="sidenavMode" [opened]="sidenavMode === 'side'" (window:resize)="onResize($event.target.innerWidth)">
+<mat-sidenav-container fullscreen>
+  <mat-sidenav fxLayout="column" #sidenav [mode]="sidenavMode" [opened]="sidenavMode === 'side'" (window:resize)="onResize($event.target.innerWidth)">
     <div class="sidenav-banner" fxFlex="noshrink" fxLayoutAlign="center center" fxLayout="column">
       <img src="assets/img/tigercropped.jpg">
       <img src="assets/img/tigercropped.jpg" class="blur">
     </div>
-    <md-nav-list fxFlex="grow">
-      <a md-list-item *ngFor="let route of routes" routerLink="{{route.path}}" routerLinkActive="active" (click)="sidenavMode === 'over' && sidenav.close()">
-        <img md-list-icon [src]="route?.data.icon">
-        <span md-line> {{route?.data['title']}} </span>
+    <mat-nav-list fxFlex="grow">
+      <a mat-list-item *ngFor="let route of routes" routerLink="{{route.path}}" routerLinkActive="active" (click)="sidenavMode === 'over' && sidenav.close()">
+        <img mat-list-icon [src]="route?.data.icon">
+        <span mat-line> {{route?.data['title']}} </span>
       </a>
-    </md-nav-list>
-  </md-sidenav>
+    </mat-nav-list>
+  </mat-sidenav>
   <div class="main-content">
-    <md-toolbar color="custom">
-      <button disableRipple md-icon-button (click)="sidenav.toggle()" *ngIf="sidenavMode === 'over'">
-        <md-icon>menu</md-icon>
+    <mat-toolbar color="custom">
+      <button disableRipple mat-icon-button (click)="sidenav.toggle()" *ngIf="sidenavMode === 'over'">
+        <mat-icon>menu</mat-icon>
       </button>
       <h2>Wrightstown Full Court Club</h2>
-    </md-toolbar>
+    </mat-toolbar>
 
-    <md-card class="middle-column" fxLayout="column">
+    <mat-card class="middle-column" fxLayout="column">
       <router-outlet></router-outlet>
-      <md-divider></md-divider>
+      <mat-divider></mat-divider>
       <div fxLayoutAlign="center center" fxLayout="column">
         <img src="assets/img/FullCourtLogo-216.png">
       </div>
-    </md-card>
+    </mat-card>
   </div>
-</md-sidenav-container>
+</mat-sidenav-container>
