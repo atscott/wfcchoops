@@ -1,15 +1,15 @@
 import {ModuleWithProviders, NgModule} from '@angular/core';
-import {MdButtonModule, MdCardModule, MdIconModule, MdListModule, MdMenuModule, MdSidenavModule, MdTabsModule, MdToolbarModule} from '@angular/material';
+import {MatButtonModule, MatCardModule, MatIconModule, MatListModule, MatMenuModule, MatSidenavModule, MatTabsModule, MatToolbarModule} from '@angular/material';
 
 @NgModule({
   exports: [
-    MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule,
-    MdSidenavModule, MdTabsModule, MdListModule
+    MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule,
+    MatSidenavModule, MatTabsModule, MatListModule
   ],
   imports: [
-    MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule,
-    MdSidenavModule, MdTabsModule, MdListModule
+    MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule,
+    MatSidenavModule, MatTabsModule, MatListModule
   ]
 })
-export class MdModule {
+export class MatModule {
 }

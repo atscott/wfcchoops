@@ -14,7 +14,7 @@ import {environment} from '../environments/environment';
 import {Home} from './home';
 import {K4} from './k4/k4.component';
 import {Links} from './links/links.component';
-import {MdModule} from './md.module';
+import {MatModule} from './md.module';
 import {NoContent} from './no-content';
 import {OpenGym} from './opengym/opengym.component';
 import {ROUTES} from './app.routes';
@@ -48,7 +48,7 @@ const APP_PROVIDERS = [...APP_RESOLVER_PROVIDERS];
     BrowserModule,
     FormsModule,
     HttpModule,
-    MdModule,
+    MatModule,
     FlexLayoutModule,
     RouterModule.forRoot(ROUTES, {useHash: !environment.production})
   ],
