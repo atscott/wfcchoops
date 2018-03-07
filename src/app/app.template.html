@@ -20,11 +20,13 @@
     </mat-toolbar>
 
     <mat-card class="middle-column" fxLayout="column">
-      <router-outlet></router-outlet>
-      <mat-divider></mat-divider>
-      <div fxLayoutAlign="center center" fxLayout="column">
-        <img src="assets/img/FullCourtLogo-216.png">
-      </div>
+      <mat-card-content>
+        <router-outlet></router-outlet>
+        <mat-divider></mat-divider>
+        <div fxLayoutAlign="center center" fxLayout="column">
+          <img src="assets/img/FullCourtLogo-216.png">
+        </div>
+      </mat-card-content>
     </mat-card>
   </div>
 </mat-sidenav-container>

@@ -27,50 +27,43 @@ img.blur {
   -webkit-filter: blur(15px);
 }
 
-:host >>> .mat-list-item {
+.mat-nav-list .mat-list-item {
   height: 80px;
 }
 
-:host >>> .mat-nav-list .mat-list-item .mat-list-item-content {
+.mat-nav-list .mat-list-item .mat-list-item-content {
   height: 100%;
 }
 
-:host >>> .mat-nav-list .mat-list-item .mat-list-icon {
+.mat-nav-list .mat-list-item .mat-list-icon {
   height: auto;
   width: 100px;
   border-radius: initial;
 }
 
-:host >>> .mat-nav-list a.active {
+.mat-nav-list a.active {
   background: #efefef;
 }
 
-:host >>> .mat-nav-list a.active .mat-line {
+.mat-nav-list a.active .mat-line {
   color: #1565c0;
 }
 
-:host >>> .mat-card .mat-divider {
+.mat-card .mat-divider {
   margin: 36px 0 36px 0;
   border-top: 1px solid #1565c0;
+  position: relative;
 }
 
-:host >>> .mat-toolbar.mat-custom {
+.mat-toolbar.mat-custom {
   background: #2196f3;
   color: white;
 }
 
-:host >>> .mat-toolbar-row {
+.mat-toolbar-row {
   margin: 8px 0 8px 0;
 }
 
-body {
+body, .mat-drawer-content {
   background: #e3f2fd;
-}
-
-:host >>> .mat-ink-bar {
-  background-color: #01579b!important;
-}
-
-:host >>> .mat-tab-label:focus {
-  background-color: rgba(187, 222, 251, 0.3)!important;
 }
