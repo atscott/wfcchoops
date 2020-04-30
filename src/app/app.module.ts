@@ -1,6 +1,7 @@
 import {ApplicationRef, NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
-import {HttpModule} from '@angular/http';
+import {CommonModule} from '@angular/common';
+import {HttpClientModule} from '@angular/common/http';
 import {BrowserModule} from '@angular/platform-browser';
 import {RouterModule} from '@angular/router';
 import {FlexLayoutModule} from '@angular/flex-layout';
@@ -46,8 +47,9 @@ const APP_PROVIDERS = [...APP_RESOLVER_PROVIDERS];
   imports: [ // import Angular's modules
     BrowserAnimationsModule,
     BrowserModule,
+    CommonModule,
     FormsModule,
-    HttpModule,
+    HttpClientModule,
     MatModule,
     FlexLayoutModule,
     RouterModule.forRoot(ROUTES, {useHash: !environment.production})
@@ -57,6 +59,6 @@ const APP_PROVIDERS = [...APP_RESOLVER_PROVIDERS];
   ]
 })
 export class AppModule {
-  constructor(public appRef:ApplicationRef) {
+  constructor(public appRef: ApplicationRef) {
   }
 }
