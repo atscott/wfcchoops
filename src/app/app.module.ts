@@ -17,7 +17,6 @@ import {K4} from './k4/k4.component';
 import {Links} from './links/links.component';
 import {MatModule} from './md.module';
 import {NoContent} from './no-content';
-import {OpenGym} from './opengym/opengym.component';
 import {ROUTES} from './app.routes';
 import {Teams} from './teams/teams.component';
 import {Tournaments} from './tournaments/tournaments.component';
@@ -39,7 +38,6 @@ const APP_PROVIDERS = [...APP_RESOLVER_PROVIDERS];
     K4,
     Links,
     NoContent,
-    OpenGym,
     Teams,
     Tournaments,
     Whs,

@@ -6,7 +6,6 @@ import {Home} from './home';
 import {K4} from './k4/k4.component';
 import {Links} from './links/links.component';
 import {NoContent} from './no-content';
-import {OpenGym} from './opengym/opengym.component';
 import {Teams} from './teams/teams.component';
 import {Tournaments} from './tournaments/tournaments.component';
 import {Whs} from './whs/whs.component';
@@ -24,11 +23,6 @@ export const ROUTES:Routes = [
   {path: 'whs', component: Whs, data: {title: 'WHS basketball', icon: 'assets/img/Basketball-WHS.png'}},
   {path: 'k-4', component: K4, data: {title: 'WFCC K-4 programs', icon: 'assets/img/Basketball-k-8.png'}},
   {path: 'links', component: Links, data: {title: 'Links', icon: 'assets/img/Basketball-links.png'}},
-  {
-    path: 'opengym',
-    component: OpenGym,
-    data: {title: 'WFCC open gym schedule', icon: 'assets/img/Basketball-opengym.png'}
-  },
   {path: 'contact', component: Contact, data: {title: 'Contact us', icon: 'assets/img/Basketball-contact.png'}},
   {path: '**', component: NoContent},
 ];
