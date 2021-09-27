@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {ROUTES} from './app.routes';
+import {Routes} from '@angular/router';
 
 @Component({
   selector: 'app',
@@ -7,11 +8,8 @@ import {ROUTES} from './app.routes';
   templateUrl: './app.template.html'
 })
 export class AppComponent {
-  routes = [];
-  sidenavMode = 'side';
-
-  constructor() {
-  }
+  routes: Routes = [];
+  sidenavMode: 'side'|'over' = 'side';
 
   ngOnInit() {
     this.onResize(window.innerWidth);
