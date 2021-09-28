@@ -1,5 +1,6 @@
 {
   "projects": {
-    "wfcchoops": "wfcchoops-f84d0"
+    "wfcchoops": "wfcchoops-f84d0",
+    "default": "wfcchoops-f84d0"
   }
 }

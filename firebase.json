@@ -4,6 +4,11 @@
   },
   "hosting": {
     "public": "dist/wfcchoops",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
     "rewrites": [
       {
         "source": "**",
