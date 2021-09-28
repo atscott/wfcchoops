@@ -17,9 +17,6 @@ script:
   - npm test --watch=false
   - ng build --prod
 
-after_success:
-  - ./deploy.sh
-
 notifications:
   email:
     on_failure: change
