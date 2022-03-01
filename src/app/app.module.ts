@@ -50,7 +50,7 @@ const APP_PROVIDERS = [...APP_RESOLVER_PROVIDERS];
     HttpClientModule,
     MatModule,
     FlexLayoutModule,
-    RouterModule.forRoot(ROUTES, {useHash: !environment.production})
+    RouterModule.forRoot(ROUTES)
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
     APP_PROVIDERS
