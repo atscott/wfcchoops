@@ -1,10 +1,11 @@
 import {Component} from '@angular/core';
 
 @Component({
-  selector: 'contact',
-  styles: [`
+    selector: 'contact',
+    styles: [`
   `],
-  templateUrl: './contact.template.html'
+    templateUrl: './contact.template.html',
+    standalone: true
 })
 export class Contact {
   constructor() {

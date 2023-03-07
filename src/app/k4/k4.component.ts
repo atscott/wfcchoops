@@ -1,10 +1,11 @@
 import {Component} from '@angular/core';
 
 @Component({
-  selector: 'k4',
-  styles: [`
+    selector: 'k4',
+    styles: [`
   `],
-  templateUrl: './k4.template.html'
+    templateUrl: './k4.template.html',
+    standalone: true
 })
 export class K4 {
   constructor() {

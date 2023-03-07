@@ -7,7 +7,11 @@ import {MatModule} from './md.module';
 import {AppComponent} from './app.component';
 import {AppModule} from './app.module';
 
-@Component({selector: 'app-test-cmp', template: ''})
+@Component({
+    selector: 'app-test-cmp', template: '',
+    standalone: true,
+    imports: [AppModule, MatModule, RouterTestingModule, RouterModule]
+})
 class BlankCmp {
 }
 
@@ -19,11 +23,10 @@ describe('App', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [BlankCmp],
-      imports: [AppModule, MatModule, RouterTestingModule, RouterModule],
-      // TODO: routertestingmodule.withroutes when it's available
-      providers: [provideRoutes(config)]
-    });
+    imports: [AppModule, MatModule, RouterTestingModule, RouterModule, BlankCmp],
+    // TODO: routertestingmodule.withroutes when it's available
+    providers: [provideRoutes(config)]
+});
     TestBed.compileComponents().then(
         () => {
           fixture = TestBed.createComponent(AppComponent);
