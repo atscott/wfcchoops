@@ -4,14 +4,12 @@ import {CommonModule} from '@angular/common';
 import {HttpClientModule} from '@angular/common/http';
 import {BrowserModule} from '@angular/platform-browser';
 import {RouterModule} from '@angular/router';
-import {FlexLayoutModule} from '@angular/flex-layout';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {APP_RESOLVER_PROVIDERS} from './app.resolver';
 import {About} from './about';
 import {AppComponent} from './app.component';
 import {Contact} from './contact/contact.component';
-import {environment} from '../environments/environment';
 import {Home} from './home';
 import {K4} from './k4/k4.component';
 import {Links} from './links/links.component';
@@ -49,7 +47,6 @@ const APP_PROVIDERS = [...APP_RESOLVER_PROVIDERS];
     FormsModule,
     HttpClientModule,
     MatModule,
-    FlexLayoutModule,
     RouterModule.forRoot(ROUTES)
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection

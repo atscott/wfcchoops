@@ -1,12 +1,12 @@
 <mat-sidenav-container fullscreen>
   <mat-sidenav #sidenav [mode]="sidenavMode" [opened]="sidenavMode === 'side'"
     (window:resize)="onResize($any($event).target.innerWidth)">
-    <div fxLayout="column">
-      <div class="sidenav-banner" fxFlex="noshrink" fxLayoutAlign="center center" fxLayout="column">
+    <div style="flex-direction: column; box-sizing: border-box; display: flex;">
+      <div class="sidenav-banner" style="flex-direction: column; box-sizing: border-box; display: flex; flex: 1 0 auto; place-content: center; align-items: center;">
         <img src="assets/img/tigercropped.jpg">
         <img src="assets/img/tigercropped.jpg" class="blur">
       </div>
-      <mat-nav-list fxFlex="grow">
+      <mat-nav-list style="flex: 1 1 100%; box-sizing: border-box; max-height: 100%;">
         <a mat-list-item *ngFor="let route of routes" routerLink="{{route.path}}" routerLinkActive="active"
           (click)="sidenavMode === 'over' && sidenav.close()">
           <img mat-list-icon [src]="route?.data.icon">
@@ -23,11 +23,11 @@
       <h2>Wrightstown Full Court Club</h2>
     </mat-toolbar>
 
-    <mat-card class="middle-column" fxLayout="column">
+    <mat-card class="middle-column" style="flex-direction: column; box-sizing: border-box; display: flex;">
       <mat-card-content>
         <router-outlet></router-outlet>
         <mat-divider></mat-divider>
-        <div fxLayoutAlign="center center" fxLayout="column">
+        <div style="flex-direction: column; box-sizing: border-box; display: flex; place-content: center; align-items: center;">
           <img src="assets/img/FullCourtLogo-216.png">
         </div>
       </mat-card-content>
