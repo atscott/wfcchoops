@@ -39,7 +39,7 @@ export class AppComponent {
 
   ngOnInit() {
     this.onResize(window.innerWidth);
-    this.routes = ROUTES.filter(r => r.data && r.data['title']);
+    this.routes = ROUTES.filter(r => r.title);
   }
 
   onResize(width) {

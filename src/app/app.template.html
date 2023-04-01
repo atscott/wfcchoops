@@ -2,7 +2,8 @@
   <mat-sidenav #sidenav [mode]="sidenavMode" [opened]="sidenavMode === 'side'"
     (window:resize)="onResize($any($event).target.innerWidth)">
     <div style="flex-direction: column; box-sizing: border-box; display: flex;">
-      <div class="sidenav-banner" style="flex-direction: column; box-sizing: border-box; display: flex; flex: 1 0 auto; place-content: center; align-items: center;">
+      <div class="sidenav-banner"
+        style="flex-direction: column; box-sizing: border-box; display: flex; flex: 1 0 auto; place-content: center; align-items: center;">
         <img src="assets/img/tigercropped.jpg">
         <img src="assets/img/tigercropped.jpg" class="blur">
       </div>
@@ -10,7 +11,7 @@
         <a mat-list-item *ngFor="let route of routes" routerLink="{{route.path}}" routerLinkActive="active"
           (click)="sidenavMode === 'over' && sidenav.close()">
           <img mat-list-icon [src]="route?.data.icon">
-          <span mat-line> {{route?.data['title']}} </span>
+          <span mat-line> {{route.title}} </span>
         </a>
       </mat-nav-list>
     </div>
@@ -27,7 +28,8 @@
       <mat-card-content>
         <router-outlet></router-outlet>
         <mat-divider></mat-divider>
-        <div style="flex-direction: column; box-sizing: border-box; display: flex; place-content: center; align-items: center;">
+        <div
+          style="flex-direction: column; box-sizing: border-box; display: flex; place-content: center; align-items: center;">
           <img src="assets/img/FullCourtLogo-216.png">
         </div>
       </mat-card-content>
