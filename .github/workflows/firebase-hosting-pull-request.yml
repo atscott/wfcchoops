@@ -10,8 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: yarn
-      - run: npm i -g @angular/cli@latest
-      - run: ng build --prod
+      - run: yarn ng run wfcchoops:build:production
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
