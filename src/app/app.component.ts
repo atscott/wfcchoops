@@ -1,5 +1,5 @@
 import {NgFor, NgIf} from '@angular/common';
-import {Component, afterNextRender} from '@angular/core';
+import {Component} from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatLineModule} from '@angular/material/core';
@@ -37,13 +37,8 @@ export class AppComponent {
   routes: Routes = [];
   sidenavMode: 'side'|'over' = 'side';
 
-  constructor() {
-    afterNextRender(() => {
-      this.onResize(window.innerWidth);
-    });
-  }
-
   ngOnInit() {
+    this.onResize(window.innerWidth);
     this.routes = ROUTES.filter(r => r.title);
   }
 
