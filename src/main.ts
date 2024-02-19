@@ -1,5 +1,3 @@
-import './polyfills.ts';
-
 import {provideHttpClient, withInterceptorsFromDi} from '@angular/common/http';
 import {enableProdMode, importProvidersFrom, Injectable} from '@angular/core';
 import {bootstrapApplication, Title} from '@angular/platform-browser';

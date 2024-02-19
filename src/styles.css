@@ -3,13 +3,9 @@
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 
-.mat-ink-bar {
+/* .mat-ink-bar {
   background-color: #01579b!important;
-}
-
-.mat-tab-label:focus {
-  background-color: rgba(187, 222, 251, 0.3)!important;
-}
+} */
 
 body, .mat-drawer-content {
   background: #e3f2fd;

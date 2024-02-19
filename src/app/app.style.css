@@ -27,25 +27,31 @@ img.blur {
   -webkit-filter: blur(15px);
 }
 
-.mat-nav-list .mat-list-item {
+.mdc-list .mdc-list-item {
   height: 80px;
 }
 
-.mat-nav-list .mat-list-item .mat-list-item-content {
-  height: 100%;
+.nav-item-with-image {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 16px;
+  position: relative;
+  height: inherit;
 }
 
-.mat-nav-list .mat-list-item .mat-list-icon {
+.mdc-list .mat-mdc-list-item img {
   height: auto;
   width: 100px;
   border-radius: initial;
 }
 
-.mat-nav-list a.active {
+.mdc-list a.active {
   background: #efefef;
 }
 
-.mat-nav-list a.active .mat-line {
+.mdc-list a.active .mat-line {
   color: #1565c0;
 }
 
