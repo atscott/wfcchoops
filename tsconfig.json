@@ -1,5 +1,8 @@
 {
   "compileOnSave": false,
+  "angularCompilerOptions": {
+    "strictTemplates": true
+  },
   "compilerOptions": {
     "downlevelIteration": true,
     "importHelpers": true,
@@ -22,5 +25,6 @@
     "module": "esnext",
     "baseUrl": "./",
     "useDefineForClassFields": false
-  }
+  },
+  "include": ["src/**/*.ts"]
 }

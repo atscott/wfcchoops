@@ -8,13 +8,15 @@
         <img src="assets/img/tigercropped.jpg" class="blur">
       </div>
       <mat-nav-list style="flex: 1 1 100%; box-sizing: border-box; max-height: 100%;">
-        <a mat-list-item *ngFor="let route of routes" routerLink="{{route.path}}" routerLinkActive="active"
-          (click)="sidenavMode === 'over' && sidenav.close()">
-          <div class="nav-item-with-image">
-            <img [src]="route?.data.icon">
-            <span style="padding-left: 16px" mat-line> {{route.title}} </span>
-          </div>
-        </a>
+        @for (route of routes; track $index) {
+          <a mat-list-item routerLink="{{route.path}}" routerLinkActive="active"
+            (click)="sidenavMode === 'over' && sidenav.close()">
+            <div class="nav-item-with-image">
+              <img [src]="route?.data.icon">
+              <span style="padding-left: 16px" mat-line> {{route.title}} </span>
+            </div>
+          </a>
+        }
       </mat-nav-list>
     </div>
   </mat-sidenav>

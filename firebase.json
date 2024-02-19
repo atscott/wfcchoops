@@ -3,7 +3,7 @@
     "rules": "database.rules.json"
   },
   "hosting": {
-    "public": "dist/wfcchoops",
+    "public": "dist/wfcchoops/browser",
     "ignore": [
       "firebase.json",
       "**/.*",
