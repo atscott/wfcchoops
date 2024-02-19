@@ -3,7 +3,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 
 @Component({
     selector: 'tournaments',
-    styleUrls: ['./tournaments.style.css'],
+    styleUrls: ['./tournaments.style.scss'],
     templateUrl: './tournaments.template.html',
     standalone: true,
     imports: [MatTabsModule]

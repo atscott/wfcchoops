@@ -3,7 +3,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 
 @Component({
     selector: 'about',
-    styleUrls: ['./about.style.css'],
+    styleUrls: ['./about.style.scss'],
     templateUrl: './about.template.html',
     standalone: true,
     imports: [MatTabsModule]

@@ -14,7 +14,7 @@ import {ROUTES} from './app.routes';
 
 @Component({
   selector: 'app',
-  styleUrls: ['./app.style.css'],
+  styleUrls: ['./app.style.scss'],
   templateUrl: './app.template.html',
   standalone: true,
   imports: [
