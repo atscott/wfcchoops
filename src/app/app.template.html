@@ -12,7 +12,7 @@
           (click)="sidenavMode === 'over' && sidenav.close()">
           <div class="nav-item-with-image">
             <img [src]="route?.data.icon">
-            <span mat-line> {{route.title}} </span>
+            <span style="padding-left: 16px" mat-line> {{route.title}} </span>
           </div>
         </a>
       </mat-nav-list>
@@ -23,7 +23,7 @@
       <button disableRipple mat-icon-button (click)="sidenav.toggle()" *ngIf="sidenavMode === 'over'">
         <mat-icon>menu</mat-icon>
       </button>
-      <h2>Wrightstown Full Court Club</h2>
+      <h1>Wrightstown Full Court Club</h1>
     </mat-toolbar>
 
     <mat-card class="middle-column" style="flex-direction: column; box-sizing: border-box; display: flex;">
