@@ -1,9 +1,9 @@
+import { NgOptimizedImage } from '@angular/common';
 import {Component} from '@angular/core';
 
 @Component({
     selector: 'whs',
-    styles: [`
-  `],
+    imports: [NgOptimizedImage],
     templateUrl: './whs.template.html',
     standalone: true
 })
