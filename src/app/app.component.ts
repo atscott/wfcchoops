@@ -47,7 +47,7 @@ export class AppComponent {
     this.routes = ROUTES.filter(r => r.title);
   }
 
-  onResize(width) {
+  onResize(width: number) {
     const contentWidth = 700;
     const sidenavWidth = 476;
     this.sidenavMode = width < contentWidth + sidenavWidth ? 'over' : 'side';

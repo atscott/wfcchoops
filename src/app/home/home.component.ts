@@ -6,7 +6,7 @@ import {Component} from '@angular/core';
     templateUrl: './home.template.html',
     standalone: true
 })
-export class Home {
+export default class Home {
   constructor() {
   }
 }

@@ -6,7 +6,5 @@ import {Component} from '@angular/core';
     templateUrl: './links.template.html',
     standalone: true
 })
-export class Links {
-  constructor() {
-  }
+export default class Links {
 }

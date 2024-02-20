@@ -7,7 +7,5 @@ import {Component} from '@angular/core';
     templateUrl: './teams.template.html',
     standalone: true
 })
-export class Teams {
-  constructor() {
-  }
+export default class Teams {
 }

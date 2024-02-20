@@ -9,6 +9,6 @@ import {Component} from '@angular/core';
   `,
     standalone: true
 })
-export class NoContent {
+export default class NoContent {
 
 }

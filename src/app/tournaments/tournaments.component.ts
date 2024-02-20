@@ -8,7 +8,5 @@ import { MatTabsModule } from '@angular/material/tabs';
     standalone: true,
     imports: [MatTabsModule]
 })
-export class Tournaments {
-  constructor() {
-  }
+export default class Tournaments {
 }

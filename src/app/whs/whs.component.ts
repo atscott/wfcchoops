@@ -7,7 +7,5 @@ import {Component} from '@angular/core';
     templateUrl: './whs.template.html',
     standalone: true
 })
-export class Whs {
-  constructor() {
-  }
+export default class Whs {
 }

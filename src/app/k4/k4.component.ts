@@ -7,7 +7,5 @@ import {Component} from '@angular/core';
     templateUrl: './k4.template.html',
     standalone: true
 })
-export class K4 {
-  constructor() {
-  }
+export default class K4 {
 }

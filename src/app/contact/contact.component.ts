@@ -7,7 +7,7 @@ import {Component} from '@angular/core';
     templateUrl: './contact.template.html',
     standalone: true
 })
-export class Contact {
+export default class Contact {
   constructor() {
   }
 }
