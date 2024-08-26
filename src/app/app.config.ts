@@ -26,6 +26,6 @@ export const appConfig = {
     provideHttpClient(withInterceptorsFromDi()),
     provideRouter(ROUTES, withViewTransitions({skipInitialTransition: true})),
     {provide: TitleStrategy, useClass: TemplatePageTitleStrategy},
-    // provideClientHydration(),
+    provideClientHydration(),
   ]
 }
