@@ -1,5 +1,5 @@
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
-import {Injectable} from '@angular/core';
+import {Injectable, provideExperimentalZonelessChangeDetection} from '@angular/core';
 import {Title, provideClientHydration} from '@angular/platform-browser';
 import {provideAnimations} from '@angular/platform-browser/animations';
 import {provideRouter, RouterStateSnapshot, TitleStrategy, withViewTransitions} from '@angular/router';
@@ -27,5 +27,6 @@ export const appConfig = {
     provideRouter(ROUTES, withViewTransitions({skipInitialTransition: true})),
     {provide: TitleStrategy, useClass: TemplatePageTitleStrategy},
     provideClientHydration(),
+    provideExperimentalZonelessChangeDetection(),
   ]
 }
