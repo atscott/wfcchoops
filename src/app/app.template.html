@@ -22,9 +22,11 @@
   </mat-sidenav>
   <div class="main-content">
     <mat-toolbar color="custom">
-      <button disableRipple mat-icon-button (click)="sidenav.toggle()" *ngIf="sidenavMode === 'over'">
+      @if (sidenavMode === 'over') {
+      <button disableRipple mat-icon-button (click)="sidenav.toggle()">
         <mat-icon>menu</mat-icon>
       </button>
+      }
       <h1>Wrightstown Full Court Club</h1>
     </mat-toolbar>
 

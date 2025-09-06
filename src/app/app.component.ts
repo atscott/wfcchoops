@@ -1,4 +1,4 @@
-import {NgFor, NgIf, NgOptimizedImage} from '@angular/common';
+import {NgOptimizedImage} from '@angular/common';
 import {Component, afterNextRender} from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
@@ -20,12 +20,10 @@ import {ROUTES} from './app.routes';
   imports: [
     MatSidenavModule,
     MatListModule,
-    NgFor,
     RouterLinkActive,
     RouterLink,
     MatLineModule,
     MatToolbarModule,
-    NgIf,
     MatButtonModule,
     MatIconModule,
     MatCardModule,
