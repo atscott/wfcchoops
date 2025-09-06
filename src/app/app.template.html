@@ -4,8 +4,8 @@
     <div style="flex-direction: column; box-sizing: border-box; display: flex;">
       <div class="sidenav-banner"
         style="flex-direction: column; box-sizing: border-box; display: flex; flex: 1 0 auto; place-content: center; align-items: center;">
-        <img ngSrc="assets/img/tigercropped.jpg" width="99" height="101">
-        <img ngSrc="assets/img/tigercropped.jpg" class="blur" width="119" height="122">
+        <img ngSrc="assets/img/tigercropped.jpg" priority width="99" height="101">
+        <img ngSrc="assets/img/tigercropped.jpg" priority class="blur" width="119" height="122">
       </div>
       <mat-nav-list style="flex: 1 1 100%; box-sizing: border-box; max-height: 100%;">
         @for (route of routes; track $index) {
@@ -36,7 +36,7 @@
         <mat-divider style="margin-top: 16px; margin-bottom: 16px"></mat-divider>
         <div
           style="flex-direction: column; box-sizing: border-box; display: flex; place-content: center; align-items: center;">
-          <img ngSrc="assets/img/FullCourtLogo-216.png" width="216" height="100">
+          <img ngSrc="assets/img/FullCourtLogo-216.png" priority width="216" height="100">
         </div>
       </mat-card-content>
     </mat-card>
