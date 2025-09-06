@@ -4,8 +4,7 @@ import {Component} from '@angular/core';
 @Component({
     selector: 'whs',
     imports: [NgOptimizedImage],
-    templateUrl: './whs.template.html',
-    standalone: true
+    templateUrl: './whs.template.html'
 })
 export default class Whs {
 }

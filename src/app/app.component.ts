@@ -13,24 +13,23 @@ import {RouterLink, RouterLinkActive, RouterOutlet, Routes} from '@angular/route
 import {ROUTES} from './app.routes';
 
 @Component({
-  selector: 'app',
-  styleUrls: ['./app.style.scss'],
-  templateUrl: './app.template.html',
-  standalone: true,
-  imports: [
-    MatSidenavModule,
-    MatListModule,
-    RouterLinkActive,
-    RouterLink,
-    MatLineModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatIconModule,
-    MatCardModule,
-    RouterOutlet,
-    MatDividerModule,
-    NgOptimizedImage,
-  ]
+    selector: 'app',
+    styleUrls: ['./app.style.scss'],
+    templateUrl: './app.template.html',
+    imports: [
+        MatSidenavModule,
+        MatListModule,
+        RouterLinkActive,
+        RouterLink,
+        MatLineModule,
+        MatToolbarModule,
+        MatButtonModule,
+        MatIconModule,
+        MatCardModule,
+        RouterOutlet,
+        MatDividerModule,
+        NgOptimizedImage,
+    ]
 })
 export class AppComponent {
   routes: Routes = [];

@@ -5,7 +5,6 @@ import { MatTabsModule } from '@angular/material/tabs';
     selector: 'tournaments',
     styleUrls: ['./tournaments.style.scss'],
     templateUrl: './tournaments.template.html',
-    standalone: true,
     imports: [MatTabsModule]
 })
 export default class Tournaments {
