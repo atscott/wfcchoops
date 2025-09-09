@@ -1,6 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
-
 @use '@angular/material' as mat;
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 
 @include mat.elevation-classes();
 @include mat.app-background();

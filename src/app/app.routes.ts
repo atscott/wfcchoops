@@ -1,12 +1,15 @@
 import {Routes} from '@angular/router';
 
 export const ROUTES: Routes = [
-  {path: '', redirectTo: 'home', pathMatch: 'full'},
   {
-    path: 'home',
+    path: '',
     loadComponent: () => import('./home/home.component'),
     title: 'Home',
     data: {icon: 'assets/img/Basketball-home.png'}
+  },
+  {
+    path: 'home',
+    redirectTo: '',
   },
   {
     path: 'about',
