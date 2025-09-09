@@ -1,6 +1,7 @@
-<div class="app-container" [class.sidenav-open]="isSidenavOpen()">
-  <div class="sidenav">
-    <div style="flex-direction: column; box-sizing: border-box; display: flex; height: 100%;">
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav [mode]="sidenavMode" [opened]="sidenavMode === 'side'"
+    (window:resize)="onResize($any($event).target.innerWidth)">
+    <div style="flex-direction: column; box-sizing: border-box; display: flex;">
       <div class="sidenav-banner"
         style="flex-direction: column; box-sizing: border-box; display: flex; flex: 1 0 auto; place-content: center; align-items: center;">
         <img ngSrc="assets/img/tigercropped.jpg" priority width="99" height="101">
@@ -8,35 +9,36 @@
       </div>
       <mat-nav-list style="flex: 1 1 100%; box-sizing: border-box; max-height: 100%;">
         @for (route of routes; track $index) {
-        <a mat-list-item routerLink="{{route.path}}" routerLinkActive="active" (click)="isSidenavOpen.set(false)">
-          <div class="nav-item-with-image">
-            <img [ngSrc]="route?.data?.['icon']" width="100" height="60">
-            <span style="padding-left: 16px" mat-line> {{route.title}} </span>
-          </div>
-        </a>
+          <a mat-list-item routerLink="{{route.path}}" routerLinkActive="active"
+            (click)="sidenavMode === 'over' && sidenav.close()">
+            <div class="nav-item-with-image">
+              <img [ngSrc]="route?.data?.['icon']" width="100" height="60">
+              <span style="padding-left: 16px" mat-line> {{route.title}} </span>
+            </div>
+          </a>
         }
       </mat-nav-list>
     </div>
-  </div>
-  <div class="main-content-wrapper">
-    <div class="main-content">
-      <mat-toolbar color="custom">
-        <button class="menu-button" disableRipple mat-icon-button (click)="toggleSidenav()">
-          <mat-icon>menu</mat-icon>
-        </button>
-        <h1>Wrightstown Full Court Club</h1>
-      </mat-toolbar>
+  </mat-sidenav>
+  <div class="main-content">
+    <mat-toolbar color="custom">
+      @if (sidenavMode === 'over') {
+      <button disableRipple mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      }
+      <h1>Wrightstown Full Court Club</h1>
+    </mat-toolbar>
 
-      <mat-card class="middle-column" style="flex-direction: column; box-sizing: border-box; display: flex;">
-        <mat-card-content>
-          <router-outlet></router-outlet>
-          <mat-divider style="margin-top: 16px; margin-bottom: 16px"></mat-divider>
-          <div
-            style="flex-direction: column; box-sizing: border-box; display: flex; place-content: center; align-items: center;">
-            <img ngSrc="assets/img/FullCourtLogo-216.png" priority width="216" height="100">
-          </div>
-        </mat-card-content>
-      </mat-card>
-    </div>
+    <mat-card class="middle-column" style="flex-direction: column; box-sizing: border-box; display: flex;">
+      <mat-card-content>
+        <router-outlet></router-outlet>
+        <mat-divider style="margin-top: 16px; margin-bottom: 16px"></mat-divider>
+        <div
+          style="flex-direction: column; box-sizing: border-box; display: flex; place-content: center; align-items: center;">
+          <img ngSrc="assets/img/FullCourtLogo-216.png" priority width="216" height="100">
+        </div>
+      </mat-card-content>
+    </mat-card>
   </div>
-</div>
+</mat-sidenav-container>
