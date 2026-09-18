@@ -1,0 +1,6 @@
+{
+  "name": "WFCC Hoops",
+  "description": "Wrightstown Full-Court Club basketball organization website.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
